@@ -1,0 +1,412 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background: rgb(113, 95, 95);
+  background-size: cover;
+  background: url("../Images/Hotel.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  font-family: 'Sofia';
+
+  animation: slideShow 20s infinite;
+}
+
+@keyframes slideShow {
+  0% {
+    background: url("../Images/Image1.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  25% {
+    background: url("../Images/Image2.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  50% {
+    background: url("../Images/Image3.jpeg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  75% {
+    background: url("../Images/Image4.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  100% {
+    background: url("../Images/Image5.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+nav{
+  background: rgba(0, 0, 0, 0.786);
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+
+  .logo{
+    color: cyan;
+    font-size: 40px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: 1000;
+    font-family: 'Alex Brush';
+    animation: logoAnimation 3s linear infinite;
+
+    @keyframes logoAnimation{
+      0%{color: cyan; text-shadow: 1px 2px 1px cyan;}
+      20%{color: cyan; text-shadow: 1px 4px 7px cyan}
+      50%{color: cyan; text-shadow: 3px 8px 10px cyan;}
+      80%{color: cyan; text-shadow: 1px 4px 7px cyan;}
+      100%{color: cyan; text-shadow: 1px 2px 1px cyan;}
+  }
+  }
+
+  ul{
+    float: right;
+    margin-right: 20px;
+
+    li{
+      display: inline-block;
+      line-height: 80px;
+      margin: 0 5px;
+
+      a{
+        color: #fff;
+        font-size: 20px;
+        font-weight: 1000;
+        padding: 7px 13px;
+        border-radius: 5px;
+      }
+
+      a:hover,.active{
+        background: red;
+        transition: 0.5s;
+      }
+    }
+  }
+
+  .checkbutton{
+    color: #fff;
+    float: right;
+    font-size: 30px;
+    line-height: 80px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+  }
+
+  #checkbox{
+    display: none;
+  }
+}
+
+/* About Section Start here */
+
+.hidden{
+  width: 100%;
+  height: 100vh;
+  background: red;
+  visibility: hidden;
+}
+
+.about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border: 0px solid red;
+  background: url("../Images/Image4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  font-weight: 1000;
+  font-family: 'Sofia';
+  font-size: 0.5rem;
+
+  .mid-menu{
+    width: 90%;
+    background: #ffffff8f;
+    height: 500px;
+    border-radius: 1rem;
+  }
+  
+  h1{
+    text-align: center;
+    
+    hr{
+      width: 50%;
+      margin: auto;
+      height: 0.2rem;
+      background: rgb(232, 16, 188);
+      border: none;
+    }
+  }
+}
+/* About Section End here */
+
+/* Contactus section start here */
+
+.contactus{
+  width: 100%;
+  height: 100vh;
+  border: 1px solid rgba(0, 0, 0, 0.848);
+  background: url("../Images/Image5.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+
+  .contact-form{
+    width: 30%;
+    height: 75%;
+    border: 2px solid cyan;
+    margin: auto;
+    margin-top: 8rem;
+    background: rgba(0, 0, 0, 0.623);
+    color: #fff;
+    text-align: center;
+    border-radius: 0.5rem;
+    transition: all 0.5s ease;
+
+    &:hover{
+      box-shadow: 0px 2px 50px 1px cyan;
+
+    }
+
+    h1{
+      font-family: 'Sofia';
+    }
+
+    hr{
+      width: 90%;
+      margin: auto;
+    }
+
+    form{
+      input,textarea{
+        margin-top: 2rem;
+        width: 90%;
+        height: 3rem;
+        text-align: center;
+        font-weight: 1000;
+        border-radius: 0.5rem;
+        outline-color: cyan;
+        background: rgba(117, 115, 115, 0.355);
+        border: none;
+        color: cyan;
+        font-family: 'Sofia';
+        transition: all 0.5s ease;
+
+
+        &:focus{
+          box-shadow: 0px 2px 50px 1px cyan;
+
+        }
+      }
+
+      textarea{
+        height: 10rem !important;
+        width: 90% !important;
+        padding-top: 1rem;
+      }
+
+      button{
+        margin-top: 2rem;
+        width: 90%;
+        height: 3rem;
+        border-radius: 0.5rem;
+        font-weight: 1000;
+        font-family: 'Sofia';
+        outline: none;
+        border: none;
+        background: rgb(113, 160, 160);
+        font-size: 1rem;
+        color: #fff;
+        transition: all 0.5s ease;
+
+        &:hover{
+          background: cyan;
+          box-shadow: 0px 2px 50px 1px cyan;
+        }
+
+        &:focus{
+          box-shadow: 0px 2px 50px 1px cyan;
+          background: cyan;
+        }
+      }
+    }
+  }
+}
+
+/* Contactus section end here */
+
+/* Footer section start here */
+
+footer {
+  background-color: black;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Sofia';
+
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+
+      img {
+        height: 50px;
+        vertical-align: middle;
+      }
+
+      a{
+        list-style: none;
+        color: #fff;
+        font-weight: 1000;
+        transition: all 0.5s ease;
+
+        &:hover{
+          color: cyan;
+        }
+      }
+    }
+  }
+}
+
+/* Footer section end here */
+
+::-webkit-scrollbar{
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track{
+  background: rgb(80, 77, 77);
+}
+
+::-webkit-scrollbar-thumb{
+  background: cyan;
+  border-radius: 0.5rem;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+@media screen and (max-width: 952px) {
+  nav{
+    .logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+
+    ul{
+      li{
+        a{
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 858px) {
+  
+  nav{
+    .checkbutton{
+      display: block;
+    }
+
+    ul{
+      position: fixed;
+      width: 50%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.786);
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5s;
+
+      li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+
+        a{
+          font-size: 20px;
+        }
+
+        a:hover, a.active{
+          background: none;
+          color: cyan;
+        }
+      }
+    }
+
+    #checkbox:checked ~ ul{
+      left: 0;
+    }
+
+    #checkbox:checked ~ .checkbutton .menu-icon{
+      display: none;
+    }
+
+    #checkbox:not(:checked) ~ .checkbutton .close-icon{
+      display: none;
+    }
+  }
+
+  .contactus{
+    .contact-form{
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav{
+    .logo{
+      font-size: 20px;
+    }
+  }
+
+  .about{
+    font-size: 7px;
+  }
+
+  .contactus{
+    .contact-form{
+      width: 70%;
+    }
+  }
+}
